@@ -1,30 +1,30 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
+  "angularCompilerOptions": {},
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "moduleResolution": "node",
+    "target": "es2018",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "baseUrl": "./src",
+    "paths": {
+      "@projectTypes/*": ["app/types/*"],
+      "@interfaces/*": ["app/interfaces/*"],
+      "@modules/*": ["app/modules/*"],
+      "@libs/*": ["app/libs/*"],
+      "@i18n/*": ["i18n/*"]
+    },
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "outDir": "./dist/out-tsc"
   }
 }
